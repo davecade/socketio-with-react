@@ -6,7 +6,11 @@ function App() {
         const socket = io.connect("/");
     }, []);
 
-    return <div></div>;
+    return (
+        <div>
+            <h1>This is the Client Site</h1>
+        </div>
+    );
 }
 
 export default App;
