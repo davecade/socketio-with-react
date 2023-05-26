@@ -19,6 +19,10 @@ app.get("/express-server", (req, res) => {
 io.on("connection", (socket) => {
     console.log("New User Connected");
 
+    setTimeout(() => {
+        socket.emit("msg", "This is mesage from express server");
+    }, 2000);
+
     socket.on("disconnect", () => {
         console.log("User Disconnected");
     });
